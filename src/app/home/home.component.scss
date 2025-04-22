@@ -1,0 +1,16 @@
+
+.banner{
+    height: 80vh;
+    border: 3px solid gray;
+    // You have to put a / before the name of the picture
+    background-image: url(/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box{
+    border: 1px solid red;
+    height: 350px;
+    margin: 15px;
+    border-radius: 10px;
+}

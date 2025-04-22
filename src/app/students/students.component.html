@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let thisStudent of students; let i = index">
+            <div class="studentContainer">
+                <div class="image"></div>
+                <div class="info">
+                    <p><b>Name:</b> {{ thisStudent.Name }}</p>
+                    <p><b>Country:</b> {{ thisStudent.Country }}</p>
+                    <p><b>Age:</b> {{ thisStudent.Age }}</p> 
+                    
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-4">
+            <div class="studentContainer">
+                <div class="image"></div>
+                <div class="info"></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="studentContainer">
+                <div class="image"></div>
+                <div class="info"></div>
+            </div>
+        </div> -->
+    </div>
+</div>

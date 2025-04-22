@@ -1,0 +1,22 @@
+
+.studentContainer{
+    border: 1px solid gray;
+    height: 60vh;
+    width: 200px;
+    margin: 100px 15px;
+
+    .image{
+        height: 40%;
+        margin-bottom: 15px;
+        background-image: url('/student.webp');
+        background-position: center center;
+        background-repeat: none;
+        background-size: cover;
+    }
+
+    .info{
+        padding: 5px;
+        height: 60%;
+    }
+
+}

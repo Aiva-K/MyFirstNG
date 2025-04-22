@@ -1,0 +1,30 @@
+<!-- {{ }} double braces indicate that it's javascript -->
+<h1>{{ title }}</h1>
+<h2>Welcome {{ user }}</h2>
+
+Name: <input type="text">
+<br>
+<!-- Whatever is put into [] brackets gets binded into typescript, especially used for attributes -->
+Email: 
+<input type="email" 
+    [type]="type" 
+    [value]="email" 
+    [title]="myEmail" 
+    [attr.userstatus]="online" 
+    [class]="emailStyle"
+    [style.color]="fontColor"
+    [style.padding]="emailPadding"
+
+>
+
+<!-- In order to bind custom attributes to typescript, you have to use the attr. with [] brackets -->
+
+<!-- You can declare classes on elements with [class] -->
+ <br>
+ <button (click)="submit()">Submit</button>
+
+ <!-- When you put a () then it's called event binding, you can put click, blur, focus etc. -->
+
+<contactinfo></contactinfo>
+<br>
+<socialmedia></socialmedia>
