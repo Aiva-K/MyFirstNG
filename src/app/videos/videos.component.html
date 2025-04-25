@@ -1,0 +1,24 @@
+
+<div class="container">
+    <!-- <button (click)="loadVideos()">Load Youtube videos</button> -->
+
+    <div class="videos row">
+        <div class="col-md-6" *ngFor="let video of localVideosArray">
+            <div class="video">
+                <a [href]=" 'https://www.youtube.com/watch?v=' + video.id.videoId" target="_blank">
+                    <img [src]="video.snippet.thumbnails.high.url"
+                    [height]="video.snippet.thumbnails.high.height">
+                </a>
+                <h2>{{ video.snippet.title }}</h2>
+                <p>{{video.snippet.description}}</p>
+                <!-- <iframe width="100%" height="315" 
+                [src]="safeURL(video.id.videoId)" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            </div>
+        </div>
+        
+        
+        
+    </div>
+
+</div>

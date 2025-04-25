@@ -2,7 +2,7 @@
 <h1>{{ title }}</h1>
 <h2>Welcome {{ user }}</h2>
 
-Name: <input type="text">
+Name: <input type="text" [(ngModel)]="name">
 <br>
 <!-- Whatever is put into [] brackets gets binded into typescript, especially used for attributes -->
 Email: 
@@ -14,8 +14,13 @@ Email:
     [class]="emailStyle"
     [style.color]="fontColor"
     [style.padding]="emailPadding"
-
+    [(ngModel)]="email"
 >
+<br><br>
+
+Message: <br>
+<textarea cols="30" rows="10" [(ngModel)]="message"></textarea>
+<br><br>
 
 <!-- In order to bind custom attributes to typescript, you have to use the attr. with [] brackets -->
 

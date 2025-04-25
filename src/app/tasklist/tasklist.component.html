@@ -2,18 +2,21 @@
     <h1>My Tasks</h1>
 
     <div class="addTaskContainer">
-        <input type="text" class="form-control" #newtask>
-        <button class="btn btn-primary mt-3" (click)="addNewTask(newtask.value)">Add Task</button>
+        <!-- ngModel makes it so you can modify the input text value content from both the front end and the back end -->
+        <input type="text" class="form-control" #newtask [(ngModel)]="newTask">
+        
+        <button class="btn btn-primary mt-3" (click)="addNewTask()">Add Task</button>
 
     </div>
     <ul class="tasks mt-5">
         <!-- If you want your for loop to be counting like i++, you use i=index, the *ngFor is to run a for loop, let is val -->
+         <!-- Below shows how to give a double click command and add a function to it. -->
         <li (dblclick)="deleteTask(i)" 
         *ngFor="let thisTask of tasks; let i = index" 
         class="task d-flex" 
         [class.complete]="thisTask.isComplete" >
             <input type=checkbox class="form-check-input" (click)="changeCompleteStatus($event, i)" [id]=" 'task' + thisTask.id">
-
+            <!-- Below shows a way on how to make it so the Tasklist created, the click would work when clicking on the task LABEL rather than checkmark, adding class.complete once clicked on -->
             <label [for]=" 'task' + thisTask.id " [class.complete]="thisTask.isComplete" >{{ thisTask.taskTitle }}</label></li>
         <!-- <li class="task"><input type=checkbox class="form-check-input">  Vacuum Rooms</li>
         <li class="task"><input type=checkbox class="form-check-input">  Clean the Mirrors</li> -->
