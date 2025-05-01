@@ -1,17 +1,18 @@
+<!-- <p>Does this work?</p>
 <div class="container">
     <div class="row">
-        <div class="col-4" *ngFor="let thisStudent of students; let i = index">
+        <div class="col-4" *ngFor="let student of localStudentsArray; let i = index">
             <div class="studentContainer">
                 <div class="image"></div>
                 <div class="info">
-                    <p><b>Name:</b> {{ thisStudent.Name }}</p>
-                    <p><b>Country:</b> {{ thisStudent.Country }}</p>
-                    <p><b>Age:</b> {{ thisStudent.Age }}</p> 
+                    <p><b>Name:</b> {{ student.Name }}</p>
+                    <p><b>Country:</b> {{ student.CountryName }}</p>
+                    <p><b>FavMovie:</b> {{ student.MovieName }}</p> 
                     
 
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="col-4">
             <div class="studentContainer">
                 <div class="image"></div>
@@ -24,5 +25,43 @@
                 <div class="info"></div>
             </div>
         </div> -->
-    </div>
+    <!-- </div>
+</div> -->
+
+<div class="container">
+    <h1>Students List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>FavMovie</th>
+                <th>FavActor</th>
+                <th>Country</th>
+                <th>Continent</th>
+                <th>Is Virtual</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let student of localStudentsArray; let i = index">
+            <!-- Below is another way to bring a for Loop -->
+            <!-- @for(student of localStudentsArray; track student.Name){ -->
+                <tr>
+                    <td>{{ student.Name}}</td>
+                    <td>{{ student.MovieName }}</td>
+                    <td>{{ student.ActorName }}</td>
+                    <td>{{ student.CountryName }}</td>
+                    <td>{{ student.ContinentName }}</td>
+                    <td>
+                        @if(student.IsVirtual){
+                        <span class="virtualYes">Yes</span>
+                    }
+
+                        @else {
+                        <span class="virtualNo">No</span>
+                    }
+                </td>
+                </tr>
+            
+        </tbody>
+    </table>
 </div>
